@@ -1,53 +1,196 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Frontend</title>
-    <style>
-        *{
-            padding: 0px;
-            margin: 0px;
-        }
-        .all{
-            width: 100vw;
-            height: 100vh;
-        }
-        .whitebg{
-            height: 22vh;
-            width: 100vw;
-        }
-        .photobg{
-            height: 59vh;
-            width: 100vw;
-
-        }
-        .allblock{
-            width: 100vw;
-            height: 19vh;
-        }
-        .block{
-            width: 24.8vw;
-            height: 19vh;
-            display: inline-block;
-        }
-        
-
-
-    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400&display=swap" rel="stylesheet">
 </head>
-<body>
-    <div class="all">
-        <div class="whitebg">iit jodhpur</div>
-        <div class="photobg">photo</div>
-        <div class="allblock">
-            <div class="block">blue</div>
-            <div class="block">orange</div>
-            <div class="block">blue</div>
-            <div class="block">orange</div>
+<style>
+    body {
+        margin: 0px;
+        padding: 0px;
+    }
 
+    #IIT {
+        grid-area: IIT;
+    }
+
+    #e-mail {
+        grid-area: e-mail;
+    }
+
+    #call {
+        grid-area: call;
+    }
+
+    #bton {
+        grid-area: bton;
+    }
+
+    #t1 {
+        grid-area: t1;
+    }
+
+    #t2 {
+        grid-area: t2;
+    }
+
+    #t3 {
+        grid-area: t3;
+    }
+
+    #t4 {
+        grid-area: t4;
+    }
+
+    #srch {
+        grid-area: srch;
+    }
+
+    .header {
+        margin: auto;
+        width: 1200px;
+        height: 110px;
+        /* border: 2px solid black; */
+    }
+
+    .nav {
+        display: grid;
+        grid-template-areas:
+            'IIT IIT IIT e-mail e-mail call call bton'
+            't1 t2 t3 t4 srch srch srch srch';
+        grid-template-rows: 55px 55px;
+    }
+
+    .item {
+        /* border: 2px solid orange; */
+        align-items: center;
+        padding: 12px;
+        font-family: 'Inter', sans-serif;
+    }
+
+    .search {
+        float: right;
+        border-radius: 16px;
+        height: 18px;
+    }
+
+    .nav a {
+        text-decoration: none;
+        color: white;
+    }
+
+    .nav a,
+    #srch,
+    .search {
+        background: #0C0742;
+    }
+
+    .container {
+        /* border: 2px solid black; */
+        width: 1536px;
+        height: 470px;
+        background: linear-gradient(256.77deg, #FFFFFF -22.45%, rgba(249, 130, 21, 0.973958) -12.71%, rgba(255, 255, 255, 0) 99.41%), url(IMG/imgonline.jpg);
+    }
+
+    .container img {
+        width: 100%;
+        height: 470px;
+        opacity: 1;
+    }
+
+    .boxes {
+        display: flex;
+        width: 100%;
+    }
+
+    .box {
+        width: 25vw;
+        height: 120px;
+        text-decoration: none;
+        text-align: center;
+        padding-top: 45px;
+        font-size: 22px;
+        font-family: 'Inter', sans-serif;
+        color: white;
+    }
+
+    #box-1,
+    #box-3 {
+        background: #FF6B00;
+    }
+
+    #box-2,
+    #box-4 {
+        background: #120660;
+
+    }
+
+    #btn {
+        border-radius: 13px;
+        width: 90px;
+        height: 30px;
+        font-size: 15px;
+        color: white;
+        border: none;
+        background: #FF6B00;
+        font-family: 'Ebrima';
+    }
+</style>
+
+<body>
+    <header class="header">
+        <div class="nav">
+            <div class="item" id="IIT">IIT<br>Jodhpur</div>
+            <div class="item" id="e-mail">
+                E-mail:<br>mail@mail.com
+            </div>
+            <div class="item" id="call">
+                Call:<br>+91-XXXXXXXXXX
+            </div>
+            <div class="item" id="bton">
+                <button class="butn" id="btn">JOIN NOW</button>
+            </div>
+            <a href="https://www.google.com/" class="item" id="t1"><strong>Home</strong></a>
+            <a href="https://www.google.com/" class="item" id="t2"><strong>About</strong></a>
+            <a href="https://www.google.com/" class="item" id="t3"><strong>Help</strong></a>
+            <a href="https://www.google.com/" class="item" id="t5"><strong>Contact</strong></a>
+            <div class="item" id="srch">
+                <input type="text" name="" placeholder="Search" class="search">
+            </div>
+        </div>
+    </header>
+    <div class="container">
+        <!-- <div class="polo"></div> -->
+        <div class="photo">
+            <!-- <img src="IMG/iitjcampus.jpg" alt="Error"> -->
         </div>
     </div>
-    
+    <footer class="footer">
+        <!-- <div class="colo"></div> -->
+        <div class="boxes">
+            <a href="https://www.google.com/" class="box" id="box-1"><strong>
+                    Mess menu<br>
+                    and<br>
+                    Time table
+                </strong></a>
+            <a href="https://www.google.com/" class="box" id="box-2"><strong>
+                    Guidelines<br>
+                    Map and<br>
+                    Locations
+                </strong></a>
+            <a href="https://www.google.com/" class="box" id="box-3"><strong>
+                    Academic<br>
+                    Help
+                </strong></a>
+            <a href="https://www.google.com/" class="box" id="box-4"><strong>
+                    Clubs and<br>
+                    Societies
+                </strong></a>
+        </div>
+    </footer>
 </body>
+
 </html>
